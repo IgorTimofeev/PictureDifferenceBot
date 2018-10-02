@@ -1,2 +1,1 @@
-# PictureDifferencesBot
-Meow-meow
+An JavaFX application for automatic picture difference detection and clicking performing via anti-bot algorithm

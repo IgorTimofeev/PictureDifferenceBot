@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane styleClass="cyka" stylesheets="@Styles/cells.css">
+         <children>
+            <Canvas fx:id="canvas" height="200.0" layoutX="72.0" layoutY="144.0" onMouseDragged="#onCanvasDrag" onMousePressed="#onCanvasClick" onScroll="#onCanvasScroll" width="200.0" />
+         </children>
+      </Pane>
+      <GridPane maxWidth="-Infinity" minHeight="-Infinity" prefWidth="230.0" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox spacing="7.0" style="-fx-background-color: #2D2D2DCC;">
+               <children>
+                  <Label alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="15.0" text="Pivot / sizes / offsets" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="TOP_CENTER" spacing="5.0">
+                     <children>
+                        <TextField fx:id="pivotXInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="105.0" styleClass="textField" stylesheets="@Styles/textField.css" text="474">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="pivotYInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="105.0" styleClass="textField" stylesheets="@Styles/textField.css" text="329">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" spacing="5.0">
+                     <children>
+                        <TextField fx:id="verticalWidthInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="50.0" styleClass="textField" stylesheets="@Styles/textField.css" text="337">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="verticalHeightInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="50.0" styleClass="textField" stylesheets="@Styles/textField.css" text="497">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="horizontalWidthInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="50.0" styleClass="textField" stylesheets="@Styles/textField.css" text="687">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="horizontalHeightInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="50.0" styleClass="textField" stylesheets="@Styles/textField.css" text="242">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" spacing="5.0">
+                     <children>
+                        <TextField fx:id="verticalXOffsetInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="50.0" styleClass="textField" stylesheets="@Styles/textField.css" text="350">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="verticalYOffsetInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="50.0" styleClass="textField" stylesheets="@Styles/textField.css" text="0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="horizontalXOffsetInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="50.0" styleClass="textField" stylesheets="@Styles/textField.css" text="0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="horizontalYOffsetInput" onKeyReleased="#checkTextFields" prefHeight="25.0" prefWidth="50.0" styleClass="textField" stylesheets="@Styles/textField.css" text="255">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Label alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="15.0" text="Rendering / detection" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="renderingModeComboBox" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" onMouseExited="#saveConfig" prefHeight="25.0" stylesheets="@Styles/comboBox.css">
+                     <VBox.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </VBox.margin>
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Overlay" />
+                           <String fx:value="Approximation" />
+                           <String fx:value="Difference" />
+                        </FXCollections>
+                     </items>
+                      <value>
+                          <String fx:value="Overlay" />
+                      </value>
+                  </ComboBox>
+                  <ComboBox fx:id="differenceModeComboBox" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" onMouseExited="#saveConfig" prefHeight="25.0" stylesheets="@Styles/comboBox.css">
+                     <VBox.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </VBox.margin>
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Vertical" />
+                           <String fx:value="Horizontal" />
+                        </FXCollections>
+                     </items>
+                      <value>
+                          <String fx:value="Vertical" />
+                      </value>
+                  </ComboBox>
+                  <Label alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="15.0" text="Threshold / blur / steps / precision" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <HBox spacing="3.0">
+                     <children>
+                        <Slider fx:id="thresholdSlider" majorTickUnit="64.0" max="256.0" maxHeight="-Infinity" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#saveConfig" onMouseDragged="#saveConfig" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="10.0">
+                           <VBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </VBox.margin>
+                        </Slider>
+                        <Slider fx:id="blurSlider" blockIncrement="1.0" majorTickUnit="8.0" max="32.0" maxHeight="-Infinity" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#saveConfig" onMouseDragged="#saveConfig" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="8.0">
+                           <VBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </VBox.margin>
+                        </Slider>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="4.0" right="4.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="3.0">
+                     <children>
+                        <Slider fx:id="stepsSlider" blockIncrement="1.0" majorTickUnit="3.0" max="10.0" maxHeight="-Infinity" min="1.0" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#saveConfig" onMouseDragged="#saveConfig" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="3.0" />
+                        <Slider fx:id="precisionSlider" blockIncrement="1.0" maxHeight="-Infinity" min="1.0" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#saveConfig" onMouseDragged="#saveConfig" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="10.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="4.0" right="4.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="15.0" text="Shift / click / move min-max" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <HBox spacing="3.0">
+                     <children>
+                        <Slider fx:id="shiftMinSlider" blockIncrement="1.0" maxHeight="-Infinity" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#checkSliders" onMouseDragged="#checkSliders" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="20.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </Slider>
+                        <Slider fx:id="shiftMaxSlider" blockIncrement="1.0" maxHeight="-Infinity" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#checkSliders" onMouseDragged="#checkSliders" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="40.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Slider>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="4.0" right="4.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="3.0">
+                     <children>
+                        <Slider fx:id="mouseClickMinSlider" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" maxHeight="-Infinity" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#checkSliders" onMouseDragged="#checkSliders" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="1.0">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Slider>
+                        <Slider fx:id="mouseClickMaxSlider" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" maxHeight="-Infinity" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#checkSliders" onMouseDragged="#checkSliders" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="4.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Slider>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="4.0" right="4.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="3.0">
+                     <children>
+                        <Slider fx:id="mouseMoveMinSlider" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" maxHeight="-Infinity" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#checkSliders" onMouseDragged="#checkSliders" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="0.5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </Slider>
+                        <Slider fx:id="mouseMoveMaxSlider" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" maxHeight="-Infinity" minHeight="-Infinity" minorTickCount="1" onMouseClicked="#checkSliders" onMouseDragged="#checkSliders" prefHeight="25.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles/slider.css" value="2.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Slider>
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="checkCheckBox" mnemonicParsing="false" onMouseReleased="#saveConfig" prefHeight="25.0" prefWidth="103.0" selected="true" stylesheets="@Styles/checkBox.css" text="Detect borders" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="7.0" right="7.0" top="2.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="clickCheckBox" mnemonicParsing="false" onMouseReleased="#saveConfig" prefHeight="25.0" prefWidth="103.0" selected="true" stylesheets="@Styles/checkBox.css" text="Perform clicks" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="7.0" right="7.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="8.0" top="-2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="shuffleCheckBox" mnemonicParsing="false" onMouseReleased="#saveConfig" prefHeight="25.0" prefWidth="103.0" selected="true" stylesheets="@Styles/checkBox.css" text="Shuffle points" textFill="WHITE">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="7.0" right="7.0" top="2.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="8.0" top="-4.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onGoButtonClicked" prefHeight="38.0" styleClass="defaultButton" stylesheets="@Styles/button.css" text="cyka blyad" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
